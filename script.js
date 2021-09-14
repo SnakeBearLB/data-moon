@@ -15,3 +15,15 @@ $.ajax(settings).done(function (response) {
 });
 
 
+const $name = $('input[type=text]');
+
+
+
+
+$('form').on('submit', (e) => {
+	e.preventDefault();
+	userInput = $name.val();
+	console.log(userInput);
+	$name.val('');
+});
+
