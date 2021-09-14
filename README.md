@@ -4,7 +4,7 @@ Number facts is an application that takes in user input, does some calculations 
 <br>
 <br>  
 ## Technologies Used 
-___
+
 
 - Javascript
 - HTML
@@ -13,17 +13,17 @@ ___
 - jQuery  
 <br>
 ## Screen Shots
-___
+
 
 
 <br>
 
 ## Getting Started  
-___
+
 
 
 <br>
 
 ## Future Enhancements
-___
+
 
