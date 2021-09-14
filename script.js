@@ -25,5 +25,9 @@ $('form').on('submit', (e) => {
 	userInput = $name.val();
 	console.log(userInput);
 	$name.val('');
+	const $nameDisplay = $('<p>');
+	
+  $('.container').append($nameDisplay.text(userInput));
+
 });
 
