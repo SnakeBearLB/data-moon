@@ -76,7 +76,7 @@ function renderYearFact(data) {
 
 	// condition to alternate between date and text properties
 	const $yearFactPar = $('<p>');
-	$yearFactCont.append($yearFactPar.text(`${yearFactTemp} ${data.text}`));
+	$yearFactCont.append($yearFactPar.text(`${data.number}: ${data.text}`));
 }
 
 
