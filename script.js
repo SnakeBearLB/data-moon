@@ -48,6 +48,14 @@ $('form').on('submit', (e) => {
 	// const changeSett =
 	// console.log(settings['url'])
 
+	// animation happens here
+	// change width of div
+	$('.hor-line').animate({width: '80%'}, function(){
+		// visibility
+		$('.ver-line').css("visibility", "visible");
+		$('.ver-line').animate({height: '100%'});
+	});
+
 	// get year fact
 	const settings = {
 		"async": true,
@@ -67,14 +75,12 @@ $('form').on('submit', (e) => {
 	});
 });
 
-// function to render 
+// function to render data from 
 function renderYearFact(data) {
 	const calcNameTxt = `My calculated name = ${sumName}`;
 	const $calcNamePar = $('<p>');
 	$yearFactCont.append($calcNamePar.text(calcNameTxt));
 	const yearFactTemp = `Year ${sumName}: `; 
-
-	// condition to alternate between date and text properties
 	const $yearFactPar = $('<p>');
 	$yearFactCont.append($yearFactPar.text(`${data.number}: ${data.text}`));
 }
