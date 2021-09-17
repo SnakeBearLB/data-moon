@@ -5,7 +5,7 @@
 
 
 const $name = $('input[type=text]');
-const $yearFactCont = $('.bin-name-container');
+const $yearFactCont = $('.fact-container');
 
 
 let sumName;
@@ -50,7 +50,7 @@ $('form').on('submit', (e) => {
 
 	// animation happens here
 	// change width of div
-	$('.hor-line').animate({width: '80%'}, function(){
+	$('.hor-line').animate({width: '100%'}, function(){
 		// visibility
 		$('.ver-line').css("visibility", "visible");
 		$('.ver-line').animate({height: '100%'});
@@ -82,7 +82,7 @@ function renderYearFact(data) {
 	$yearFactCont.append($calcNamePar.text(calcNameTxt));
 	const yearFactTemp = `Year ${sumName}: `; 
 	const $yearFactPar = $('<p>');
-	$yearFactCont.append($yearFactPar.text(`${data.number}: ${data.text}`));
+	$yearFactCont.append($yearFactPar.text(`${data.number}: ${data.text}`)).fadeIn(30000);
 }
 
 

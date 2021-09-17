@@ -6,22 +6,26 @@ body {
   padding: 0;
   margin: 0;
   background-color: rgb(219, 190, 126);
-  /* background-image: radial-gradient(circle, rgb(252, 199, 86) , rgb(61, 20, 85) 90%); */
-  /* background-repeat: no-repeat; */
+  background-repeat: no-repeat;
+}
+
+form {
+  margin-top: 100px;
+  margin-bottom: 50px;
 }
 
 
-
-.bin-name-container {
+.fact-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 40px 0px;
 }
 
 p {
   font-size: 16px;
+  color: white;
+  background-color: gray;
 }
 
 input[type="text"], textarea {
@@ -45,25 +49,45 @@ input[type="text"], textarea {
   color: white;
 }
 
-.bin-name-container {
-  margin-top: 50px;
+
+.svg-moon {
+  background-image: url(/images/data-moon2.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 200px;
+  width: 250px;
+  margin: auto;
 }
 
-/* #moon-div {
-  
-} */
-
-svg {
-  width: 75%;
+.animated-lines {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin: auto;
+  width: 75px;
+  height: 100px;
+  top: 25px;
+  right: 50px;
 }
 
-.animation-container-1 {
-  background-color: lightgray;
-  width: 50%;
+.hor-line {
+  width: 0px;
+  height: 2px;
+  background-color: #6f00ab;
+  opacity: 40%;
 }
 
-#moving-line1-container {
+.ver-line {
+  visibility: hidden;
+  width: 2px;
+  background-color: #6f00ab;
+  opacity: 40%;
+}
 
+.moving-line {
+  margin: 10px 0px;
   width: 100%;
   display: flex;
   flex-direction: row-reverse;
@@ -72,9 +96,8 @@ svg {
 #moving-line1 {
   background-color: #6f00ab;
   opacity: 40%;
-  margin-right: 20px;
-  height: 1px;
-  width: 30%;
+  height: 2px;
+  width: 100%;
   animation-name: moving-line;
   animation-duration: 2.5s;
   animation-direction: alternate;
@@ -82,19 +105,11 @@ svg {
   animation-play-state: running;
 }
 
-#moving-line2-container {
-  width: 100%;
-  margin: 5px;
-  display: flex;
-  flex-direction: row-reverse;
-}
-
 #moving-line2 {
   background-color: #6f00ab;
   opacity: 40%;
-  margin-right: 30px;
-  height: 1px;
-  width: 50%;
+  height: 2px;
+  width: 100%;
   animation-name: moving-line;
   animation-duration: 2s;
   animation-direction: alternate;
@@ -102,18 +117,10 @@ svg {
   animation-play-state: running;
 }
 
-#moving-line3-container {
-  width: 100%;
-  margin: 5px;
-  display: flex;
-  flex-direction: row-reverse;
-}
-
 #moving-line3 {
   background-color: #6f00ab;
   opacity: 40%;
-  margin-right: 30px;
-  height: 1px;
+  height: 2px;
   width: 20%;
   animation-name: moving-line;
   animation-duration: 1.5s;
@@ -128,49 +135,16 @@ svg {
   }
 
   100% {
-    width: 40%;
+    width: 100%;
   }
 }
 
 
-.animated-lines {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: flex-end;
-  position: relative;
-  bottom: 35%;
-  width: 100%;
-  height: 400px;
-}
-
-.hor-line {
-  width: 30%;
-  height: 1px;
-  background-color: #6f00ab;
-  opacity: 40%;
-}
-
-.ver-line {
-  visibility: hidden;
-  width: 1px;
-  background-color: #6f00ab;
-  opacity: 40%;
-}
-
-#moving-line4-container {
-  width: 100%;
-  margin: 5px;
-  display: flex;
-  flex-direction: row-reverse;
-}
-
 #moving-line4 {
   background-color: #6f00ab;
   opacity: 40%;
-  margin-right: 30px;
   height: 1px;
-  width: 20%;
+  width: 100%;
   animation-name: moving-line;
   animation-duration: 3s;
   animation-direction: alternate;
@@ -178,19 +152,11 @@ svg {
   animation-play-state: running;
 }
 
-#moving-line5-container {
-  width: 100%;
-  margin: 10px;
-  display: flex;
-  flex-direction: row-reverse;
-}
-
 #moving-line5 {
   background-color: #6f00ab;
   opacity: 40%;
-  margin-right: 0px;
-  height: 1px;
-  width: 40%;
+  height: 2px;
+  width: 100%;
   animation-name: moving-line;
   animation-duration: 4s;
   animation-direction: alternate;
@@ -199,5 +165,36 @@ svg {
 }
 
 #moving-line6 {
+  background-color: #6f00ab;
+  opacity: 40%;
+  height: 2px;
+  width: 100%;
+  animation-name: moving-line;
+  animation-duration: 2.5s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
   
+}
+
+
+/* media queries */
+
+@media (min-width: 576px) { 
+  .svg-moon {
+    height: 400px;
+    width: 400px;
+  }
+
+  .animated-lines {
+    width: 150px;
+    height: 100px;
+    top: 50px;
+    right: 100px;
+  }
+
+  .moving-line {
+    margin: 20px 0px;
+
+  }
 }
