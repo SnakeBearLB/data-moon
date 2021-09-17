@@ -17,8 +17,8 @@
 <body>
 
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-info">
-    <a class="navbar-brand text-white ms-3" id="navbar-brand" href="#">Number Facts</a>
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand text-white ms-3" id="navbar-brand" href="#">DATA MOON</a>
     <button class="navbar-toggler me-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -42,18 +42,13 @@
 
 
 
-
+  
   <div class="container-fluid d-flex flex-column justify-content-center align-items-center my-5">
-    <ul class="instructions list-unstyled">
-      <li>Enter your name</li>
-      <li>Your name is calculated into a number</li>
-      <li>A fact will appear equal to the number calculated</li>
-    </ul>
   </div>
 
 
   <div class="d-flex flex-column justify-content-center container align-items-center">
-    <h1>Let's start with your name</h1>
+    <!-- <h1 class="text-white">Enter your name</h1> -->
     <form>
       <input type="text" placeholder="enter name">
       <input type="submit" value="submit">
@@ -65,7 +60,32 @@
 
  
 
-  <div class="container-sm svg-moon bg-light d-flex justify-content-center">
+  <div class="container-sm svg-moon d-flex justify-content-center bg-light" id="moon-div">
+
+    <div class="col-lg d-flex flex-column justify-content-center h-20 animation-container-1">
+  
+      <div id="moving-line1-container">
+        <div id="moving-line1"></div>
+      </div>
+      <div id="moving-line2-container">
+        <div id="moving-line2"></div>
+      </div>
+      <div id="moving-line3-container">
+        <div id="moving-line3"></div>
+      </div>
+      <div class="animated-lines">
+        <div class="ver-line"></div>
+        <div class="hor-line"></div>
+      </div>
+      <div id="moving-line4-container">
+        <div id="moving-line4"></div>
+      </div>
+      <div id="moving-line5-container">
+        <div id="moving-line5"></div>
+      </div>
+      <div id="moving-line6"></div>
+    </div>
+
     <?xml version="1.0" encoding="UTF-8" standalone="no"?> <!-- Created with Vectornator for iOS (http://vectornator.io/) --><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
     <svg height="100%" style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="100%" xmlns:vectornator="http://vectornator.io" version="1.1" viewBox="0 0 2575.4 2225.96">
     <metadata>
@@ -904,21 +924,40 @@
     </g>
     </g>
     </svg>
+
+
+  
+    <div class="col-lg bg-light"></div>
+
   </div>
   
+  <!-- <div class="row">
+    <div class="col-lg d-flex flex-column justify-content-center h-20 animation-container-1">
 
-  <div class="animation-container-1">
-    <div id="moving-line1"></div>
-    <div id="moving-line2"></div>
-    <div id="moving-line3"></div>
-    <div class="animated-lines">
-      <div class="ver-line"></div>
-      <div class="hor-line"></div>
+      <div id="moving-line1-container">
+        <div id="moving-line1"></div>
+      </div>
+      <div id="moving-line2-container">
+        <div id="moving-line2"></div>
+      </div>
+      <div id="moving-line3-container">
+        <div id="moving-line3"></div>
+      </div>
+      <div class="animated-lines">
+        <div class="ver-line"></div>
+        <div class="hor-line"></div>
+      </div>
+      <div id="moving-line4-container">
+        <div id="moving-line4"></div>
+      </div>
+      <div id="moving-line5-container">
+        <div id="moving-line5"></div>
+      </div>
+      <div id="moving-line6"></div>
     </div>
-    <div id="moving-line4"></div>
-    <div id="moving-line5"></div>
-    <div id="moving-line6"></div>
-  </div>
+
+    <div class="col-lg bg-light"></div>
+  </div> -->
 
   <!-- jquery script -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>

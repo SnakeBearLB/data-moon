@@ -1,0 +1,203 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: rgb(219, 190, 126);
+  /* background-image: radial-gradient(circle, rgb(252, 199, 86) , rgb(61, 20, 85) 90%); */
+  /* background-repeat: no-repeat; */
+}
+
+
+
+.bin-name-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0px;
+}
+
+p {
+  font-size: 16px;
+}
+
+input[type="text"], textarea {
+  border: none;
+  background: none !important;
+  box-shadow: none;
+  outline: none;
+  color: white;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: white;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: white;
+}
+
+.bin-name-container {
+  margin-top: 50px;
+}
+
+/* #moon-div {
+  
+} */
+
+svg {
+  width: 75%;
+}
+
+.animation-container-1 {
+  background-color: lightgray;
+  width: 50%;
+}
+
+#moving-line1-container {
+
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+#moving-line1 {
+  background-color: #6f00ab;
+  opacity: 40%;
+  margin-right: 20px;
+  height: 1px;
+  width: 30%;
+  animation-name: moving-line;
+  animation-duration: 2.5s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+}
+
+#moving-line2-container {
+  width: 100%;
+  margin: 5px;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+#moving-line2 {
+  background-color: #6f00ab;
+  opacity: 40%;
+  margin-right: 30px;
+  height: 1px;
+  width: 50%;
+  animation-name: moving-line;
+  animation-duration: 2s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+}
+
+#moving-line3-container {
+  width: 100%;
+  margin: 5px;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+#moving-line3 {
+  background-color: #6f00ab;
+  opacity: 40%;
+  margin-right: 30px;
+  height: 1px;
+  width: 20%;
+  animation-name: moving-line;
+  animation-duration: 1.5s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+}
+
+@keyframes moving-line {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 40%;
+  }
+}
+
+
+.animated-lines {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
+  position: relative;
+  bottom: 35%;
+  width: 100%;
+  height: 400px;
+}
+
+.hor-line {
+  width: 30%;
+  height: 1px;
+  background-color: #6f00ab;
+  opacity: 40%;
+}
+
+.ver-line {
+  visibility: hidden;
+  width: 1px;
+  background-color: #6f00ab;
+  opacity: 40%;
+}
+
+#moving-line4-container {
+  width: 100%;
+  margin: 5px;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+#moving-line4 {
+  background-color: #6f00ab;
+  opacity: 40%;
+  margin-right: 30px;
+  height: 1px;
+  width: 20%;
+  animation-name: moving-line;
+  animation-duration: 3s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+}
+
+#moving-line5-container {
+  width: 100%;
+  margin: 10px;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+#moving-line5 {
+  background-color: #6f00ab;
+  opacity: 40%;
+  margin-right: 0px;
+  height: 1px;
+  width: 40%;
+  animation-name: moving-line;
+  animation-duration: 4s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+}
+
+#moving-line6 {
+  
+}
