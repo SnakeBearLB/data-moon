@@ -15,6 +15,8 @@ $('form').on('submit', (e) => {
 
 	e.preventDefault();
 
+	$('form').css('visibility', 'hidden');
+
 	$yearFactCont.empty();
 
 	const nameNums = [];
@@ -50,10 +52,25 @@ $('form').on('submit', (e) => {
 
 	// animation happens here
 	// change width of div
+	// $('.hor-line').animate({width: '100%'}, function(){
+	// 	// visibility
+	// 	$('.ver-line').css("visibility", "visible");
+	// 	$('.ver-line').animate({height: '100%'});
+	// });
+
+
 	$('.hor-line').animate({width: '100%'}, function(){
 		// visibility
 		$('.ver-line').css("visibility", "visible");
-		$('.ver-line').animate({height: '100%'});
+		$('.ver-line').animate({height: '100%'}, function(){
+			$('.info-border').css("visibility", "visible");
+			// $('.ver-line2').animate({height: '100%'});
+			$('.ver-line3').animate({height: '100%'}, function(){
+				$('.ver-line2').animate({width: '0px'});
+				$('.ver-line3').animate({width: '100%'});
+				$('p').css("visibility", "visible").hide().fadeIn(2000);
+			});
+		}); 
 	});
 
 	// get year fact
@@ -77,12 +94,12 @@ $('form').on('submit', (e) => {
 
 // function to render data from 
 function renderYearFact(data) {
-	const calcNameTxt = `My calculated name = ${sumName}`;
+	const calcNameTxt = `Your name calculated = ${sumName}`;
 	const $calcNamePar = $('<p>');
 	$yearFactCont.append($calcNamePar.text(calcNameTxt));
-	const yearFactTemp = `Year ${sumName}: `; 
+	const yearFactTemp = `In the year ${sumName}: `; 
 	const $yearFactPar = $('<p>');
-	$yearFactCont.append($yearFactPar.text(`${data.number}: ${data.text}`)).fadeIn(30000);
+	$yearFactCont.append($yearFactPar.text(`In the year ${data.number}: ${data.text}`));
 }
 
 
