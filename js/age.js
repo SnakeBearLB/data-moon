@@ -6,10 +6,7 @@
 
 const $input = $('input[type=text]');
 const $yearFactCont = $('.fact-container');
-const $about = $('#about');
-const $name = $('#name');
-const $birthday = $('.birthday');
-const $age = $('#age');
+
 
 
 let sumName;
@@ -21,7 +18,9 @@ $('form').on('submit', (e) => {
 
 	e.preventDefault();
 
-	$('#name-form').css('visibility', 'hidden');
+	$('form').css('visibility', 'hidden');
+
+  const $age = $('#age').val();
 
 	$yearFactCont.empty();
 
@@ -33,21 +32,21 @@ $('form').on('submit', (e) => {
 	$input.val('');
 
 	// convert each character of name to ascii number
-	const nameArr = userInput.split('');
-	nameArr.forEach((char) => {
-		nameNums.push(char.charCodeAt(0));
-	});
+	// const nameArr = userInput.split('');
+	// nameArr.forEach((char) => {
+	// 	nameNums.push(char.charCodeAt(0));
+	// });
 
 	// add all numbers in nameNums
-	sumName = nameNums.reduce((acc, num) => acc + num).toString();
-	console.log(sumName);
+	// sumName = nameNums.reduce((acc, num) => acc + num).toString();
+	// console.log(sumName);
 
 	// name in binary
-	nameNums.forEach((num) => {
-		const holdBin = num.toString(2);
-		binaryName.push(holdBin);
-	});
-	console.log(binaryName);
+	// nameNums.forEach((num) => {
+	// 	const holdBin = num.toString(2);
+	// 	binaryName.push(holdBin);
+	// });
+	// console.log(binaryName);
 
 	// display each char in name as binary equivelant 
 	// const $displayName = $('<p>');
@@ -71,71 +70,37 @@ $('form').on('submit', (e) => {
 		}); 
 	});
 
-	// get year fact
-	const settings = {
-		"async": true,
-		"crossDomain": true,
-		"url": `https://numbersapi.p.rapidapi.com/${sumName}/year?json=true&fragment=true`,
-		"method": "GET",
-		"headers": {
-			"x-rapidapi-host": "numbersapi.p.rapidapi.com",
-			"x-rapidapi-key": "412f149179msh81d913e7b508961p1f989djsn4fcf5b0efc84"
-		}
-	};
+	// get fact based on age
+  const settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": `https://numbersapi.p.rapidapi.com/${$age}/trivia?json=true&notfound=floor&fragment=true`,
+    "method": "GET",
+    "headers": {
+      "x-rapidapi-host": "numbersapi.p.rapidapi.com",
+      "x-rapidapi-key": "412f149179msh81d913e7b508961p1f989djsn4fcf5b0efc84"
+    }
+  };
 
 
 	$.ajax(settings).done(function (response) {
 		console.log(response)
 		renderYearFact(response);
 	});
-});
 
-// function to render data from 
-function renderYearFact(data) {
-	const calcNameTxt = `Your name calculated = ${sumName}`;
-	const $calcNamePar = $('<p>');
-	$yearFactCont.append($calcNamePar.text(calcNameTxt));
-	const yearFactTemp = `In the year ${sumName}: `; 
+
+  // function to render data from 
+  function renderYearFact(data) {
+	const ageTxt = `You entered ${$age}`;
+	const $ageTxtPar = $('<p>');
+	$yearFactCont.append($ageTxtPar.text(ageTxt));
 	const $yearFactPar = $('<p>');
-	$yearFactCont.append($yearFactPar.text(`In the year ${data.number}: ${data.text}`));
+	$yearFactCont.append($yearFactPar.text(`${data.number} is ${data.text}`));
 }
 
-// if ($('a').hasClass('active')) {
-// 	$('')
-// }
-
-// if you select different menu option
-// $birthday.click(function(){
-
-// 	$('.sr-only').removeClass('sr-only');
-// 	$(this).addClass('sr-only');
-
-// 	$('#take-data').attr('placeholder', 'enter birthday');
-
-	
+});
 
 
-
-	// const settings = {
-	// 	"async": true,
-	// 	"crossDomain": true,
-	// 	"url": "https://numbersapi.p.rapidapi.com/42/math?json=true&fragment=true",
-	// 	"method": "GET",
-	// 	"headers": {
-	// 		"x-rapidapi-host": "numbersapi.p.rapidapi.com",
-	// 		"x-rapidapi-key": "412f149179msh81d913e7b508961p1f989djsn4fcf5b0efc84"
-	// 	}
-	// };
-
-	// $.ajax(settings).done(function (response) {
-	// 	console.log(response);
-	// });
-
-
-
-
-
-// });
 
 
 

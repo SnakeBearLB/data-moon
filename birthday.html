@@ -28,7 +28,7 @@
           <a class="nav-link about" id="About" href="about.html">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" id="Name" href="name.html">Name</a>
+          <a class="nav-link" id="Name" href="index.html">Name</a>
         </li>
         <li class="nav-item active">
           <a class="nav-link birthday active" id="Birthday" href="">Birthday<span class="sr-only">(current)</span></a>
@@ -43,37 +43,22 @@
 
   <!-- form -->
   <div class="d-flex flex-column justify-content-center container align-items-center">
-    <!-- <h1 class="text-white">Enter your name</h1> -->
-    <form class="d-flex flex-column justify-content-center align-items-center" id="name-form" >
-      <input id="take-data" type="text" placeholder="enter name">
+    <!-- Enter your enter birthday -->
+    <form class="d-flex flex-column justify-content-center align-items-center" id="name-form">
+      <div class="birthday-nums d-flex flex-row">
+        <input class="month-num" id="month" type="number" placeholder="enter month" min="1" max="12">
+        <input class="day-num" id="day" type="number" placeholder="enter day" min="1" max="31">
+      </div>
       <input type="submit" value="CALCULATE">
     </form>
   </div>
-
-  <!-- birthday form
-  <div class="d-flex flex-column justify-content-center container align-items-center" id="birthday-form">
-       <h1 class="text-white">Enter your name</h1> -->
-    <!-- <form class="d-flex flex-column justify-content-center align-items-center" id="name-form" >
-      <input type="text" placeholder="enter birthday">
-      <input type="submit" value="CALCULATE">
-    </form>
-  </div> -->
-
-  <!-- age form -->
-  <!-- <div class="d-flex flex-column justify-content-center container align-items-center" id="age-form"> -->
-    <!-- <h1 class="text-white">Enter your name</h1> -->
-    <!-- <form class="d-flex flex-column justify-content-center align-items-center" id="name-form" > -->
-      <!-- <input type="text" placeholder="enter age">
-      <input type="submit" value="CALCULATE">
-    </form>
-  </div> --> 
 
 
   <div class="info-border">
     <div class="ver-line2"></div>
     <div class="ver-line3">
       <div class="fact-container">
-        <!-- name in binary will be displayed here -->
+        <!-- facts based on birthday will appear here -->
       </div>
     </div>
   </div>

@@ -100,42 +100,5 @@ function renderYearFact(data) {
 	$yearFactCont.append($yearFactPar.text(`In the year ${data.number}: ${data.text}`));
 }
 
-// if ($('a').hasClass('active')) {
-// 	$('')
-// }
-
-// if you select different menu option
-// $birthday.click(function(){
-
-// 	$('.sr-only').removeClass('sr-only');
-// 	$(this).addClass('sr-only');
-
-// 	$('#take-data').attr('placeholder', 'enter birthday');
-
-	
-
-
-
-	// const settings = {
-	// 	"async": true,
-	// 	"crossDomain": true,
-	// 	"url": "https://numbersapi.p.rapidapi.com/42/math?json=true&fragment=true",
-	// 	"method": "GET",
-	// 	"headers": {
-	// 		"x-rapidapi-host": "numbersapi.p.rapidapi.com",
-	// 		"x-rapidapi-key": "412f149179msh81d913e7b508961p1f989djsn4fcf5b0efc84"
-	// 	}
-	// };
-
-	// $.ajax(settings).done(function (response) {
-	// 	console.log(response);
-	// });
-
-
-
-
-
-// });
-
 
 
