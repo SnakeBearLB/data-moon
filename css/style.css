@@ -5,9 +5,19 @@
 body {
   padding: 0;
   margin: 0;
-  background-color: #ffffff;
-  background-image: linear-gradient(#6f00ab , #ffffff 80%);
-  background-repeat: no-repeat;
+  background: #0e0029;
+  /* background-image: linear-gradient(#6f00ab , #ffffff 80%); */
+  /* background-repeat: no-repeat; */
+}
+
+/* about page */
+.about {
+  position: absolute;
+  width: 80%;
+  height: 80%; 
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.473);
+  z-index: 5;
 }
 
 a {
@@ -19,7 +29,6 @@ a {
 }
 #navbarNav {
   margin-top: 4px;
-  background: rgba(0, 0, 0, 0.493);
 }
 
 ul {
@@ -53,7 +62,7 @@ input[type="submit"] {
   color: white;
 }
 
-/* for birthday input */
+/* for number input */
 input[type='number'] {
   border: none;
   background: none !important;
@@ -66,27 +75,34 @@ input[type='number'] {
   width: 150px;
 }
 
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+}
+
 /* for birthday input */
 #month {
-  margin-right: 20px;
+  margin-right: 12px;
 }
 
 /* for birthday input */
 #day {
-  margin-left: 20px;
+  margin-left: 12px;
 }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: white;
-  opacity: 1; /* Firefox */
+  opacity: .5; /* Firefox */
 }
 
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
   color: white;
+  opacity: .5;
 }
 
 ::-ms-input-placeholder { /* Microsoft Edge */
   color: white;
+  opacity: .5;
 }
 
 
@@ -109,8 +125,8 @@ input[type='number'] {
 }
 
 .ver-line3 {
-  background-color: #6f00aba2;
-  border: solid 5px rgba(255, 255, 255, 0.534);
+  background-color: #ffffff49;
+  border: solid 5px rgb(151, 222, 255);
   border-radius: 5px;
   width: 2px;
   display: flex;
@@ -138,7 +154,7 @@ p {
 
 
 .svg-moon {
-  background-image: url(/images/data-moon2.svg);
+  background-image: url(/images/data-moon-orange.svg);
   background-repeat: no-repeat;
   background-position: center;
   height: 200px;
@@ -164,16 +180,14 @@ p {
 .hor-line {
   width: 0px;
   height: 2px;
-  background-color: #6f00ab;
-  opacity: 40%;
+  background-color: #fc9f54;
 }
 
 .ver-line {
   position: relative;
   visibility: hidden;
   width: 3px;
-  background-color: #6f00ab;
-  opacity: 40%;
+  background-color: #fc9f54;
   z-index: -1;
 }
 
@@ -189,8 +203,8 @@ p {
 
 
 #moving-line1 {
-  background-color: #6f00ab;
-  opacity: 40%;
+  background-color: #fc818c;
+  opacity: 80%;
   height: 2px;
   width: 100%;
   animation-name: moving-line;
@@ -201,8 +215,8 @@ p {
 }
 
 #moving-line2 {
-  background-color: #6f00ab;
-  opacity: 40%;
+  background-color: #fc8b5f;
+  opacity: 80%;
   height: 2px;
   width: 100%;
   animation-name: moving-line;
@@ -213,8 +227,8 @@ p {
 }
 
 #moving-line3 {
-  background-color: #6f00ab;
-  opacity: 40%;
+  background-color: #fc8b5f;
+  opacity: 80%;
   height: 2px;
   width: 20%;
   animation-name: moving-line;
@@ -226,8 +240,8 @@ p {
 
 
 #moving-line4 {
-  background-color: #6f00ab;
-  opacity: 40%;
+  background-color: #fc818c;
+  opacity: 80%;
   height: 2px;
   width: 100%;
   animation-name: moving-line;
@@ -238,8 +252,8 @@ p {
 }
 
 #moving-line5 {
-  background-color: #6f00ab;
-  opacity: 40%;
+  background-color: #fc8b5f;
+  opacity: 80%;
   height: 2px;
   width: 100%;
   animation-name: moving-line;
@@ -250,8 +264,8 @@ p {
 }
 
 #moving-line6 {
-  background-color: #6f00ab;
-  opacity: 40%;
+  background-color: #fc8b5f;
+  opacity: 80%;
   height: 2px;
   width: 100%;
   animation-name: moving-line;
@@ -279,6 +293,10 @@ p {
 
 .moving-line5L {
   margin-right: 15%;
+}
+
+.moving-line6L {
+  margin-right: 10%;
 }
 
 @keyframes moving-line {
@@ -315,17 +333,17 @@ p {
 }
 
 .moving-line5r {
-  margin-left: 15%;
+  margin-left: 40%;
+}
+
+.moving-line6r {
+  margin-left: 40%;
 }
 
 
 /* media queries */
 
 @media (min-width: 576px) { 
-
-  body {
-    background-image: linear-gradient(#6f00ab , #ffffff 70%);
-  }
 
   .svg-moon {
     height: 400px;
@@ -357,6 +375,10 @@ p {
 
   input[type="submit"] {
     font-size: 20px;
+  }
+
+  .ver-line {
+    width: 2px;
   }
 
 }

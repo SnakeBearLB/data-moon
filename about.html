@@ -16,19 +16,20 @@
 </head>
 <body>
 
+
   <!-- navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark">
-    <a class="navbar-brand text-white ms-3" id="navbar-brand" href="#">DATA MOON</a>
+    <a class="navbar-brand text-white ms-3" id="navbar-brand" href="index.html">DATA MOON</a>
     <button class="navbar-toggler me-3" id="hamb" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon" id="hamb-lines"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item active">
-          <a class="nav-link about active" id="About" href="#">About<span class="sr-only">(current)</span></a>
+          <a class="nav-link active" id="About" href="#">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link name" id="Name" href="index.html">Name</a>
+          <a class="nav-link" id="Name" href="index.html">Name</a>
         </li>
         <li class="nav-item">
           <a class="nav-link birthday" id="Birthday" href="birthday.html">Birthday</a>
@@ -40,104 +41,7 @@
     </div>
   </nav>
 
-
-  <!-- form -->
-  <div class="d-flex flex-column justify-content-center container align-items-center">
-    <!-- <h1 class="text-white">Enter your name</h1> -->
-    <form class="d-flex flex-column justify-content-center align-items-center" id="name-form" >
-      <input id="take-data" type="text" placeholder="enter name">
-      <input type="submit" value="CALCULATE">
-    </form>
-  </div>
-
-  <!-- birthday form
-  <div class="d-flex flex-column justify-content-center container align-items-center" id="birthday-form">
-       <h1 class="text-white">Enter your name</h1> -->
-    <!-- <form class="d-flex flex-column justify-content-center align-items-center" id="name-form" >
-      <input type="text" placeholder="enter birthday">
-      <input type="submit" value="CALCULATE">
-    </form>
-  </div> -->
-
-  <!-- age form -->
-  <!-- <div class="d-flex flex-column justify-content-center container align-items-center" id="age-form"> -->
-    <!-- <h1 class="text-white">Enter your name</h1> -->
-    <!-- <form class="d-flex flex-column justify-content-center align-items-center" id="name-form" > -->
-      <!-- <input type="text" placeholder="enter age">
-      <input type="submit" value="CALCULATE">
-    </form>
-  </div> --> 
-
-
-  <div class="info-border">
-    <div class="ver-line2"></div>
-    <div class="ver-line3">
-      <div class="fact-container">
-        <!-- name in binary will be displayed here -->
-      </div>
-    </div>
-  </div>
-  
-  <div class="animated-lines">
-    <div class="ver-line"></div>
-    <div class="hor-line"></div>
-  </div>
-
-  <div class="svg-moon d-flex flex-row">
-      <div class="container-fluid d-flex flex-row animation-container-1">
-        <div class="container-fluid d-flex flex-column justify-content-center">
-
-          <div class="moving-line" id="moving-line1-container">
-            <div class="moving-line1L" id="moving-line1"></div>
-          </div>
-          <div class="moving-line" id="moving-line2-container">
-            <div class="moving-line2L" id="moving-line2"></div>
-          </div>
-          <div class="moving-line" id="moving-line3-container">
-            <div class="moving-line3L" id="moving-line3"></div>
-          </div>
-
-          <div class="moving-line" id="moving-line4-container">
-            <div class="moving-line4L" id="moving-line4"></div>
-          </div>
-          <div class="moving-line" id="moving-line5-container">
-            <div class="moving-line5L" id="moving-line5"></div>
-          </div>
-          <div class="moving-line" id="moving-line6-container">
-            <div class="moving-line6L" id="moving-line6"></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="bg-dark">
-      </div>
-
-      <div class="container d-flex flex-column justify-content-center align-items-start">
-        <div class="moving-line-right" id="moving-line1r-container">
-          <div class="moving-line1r" id="moving-line1"></div>
-        </div>
-        <div class="moving-line-right" id="moving-line2-container">
-          <div class="moving-line2r" id="moving-line2"></div>
-        </div>
-        <div class="moving-line-right" id="moving-line3-container">
-          <div class="moving-line3r" id="moving-line3"></div>
-        </div>
-
-        <div class="moving-line-right" id="moving-line4-container">
-          <div class="moving-line4r" id="moving-line4"></div>
-        </div>
-        <div class="moving-line-right" id="moving-line5-container">
-          <div class="moving-line5r" id="moving-line5"></div>
-        </div>
-        <div class="moving-line-right" id="moving-line6-container">
-          <div class="moving-line6r" id="moving-line6"></div>
-        </div>
-      </div>
-  </div>
-
-
-  
-  
+  <div class="svg-moon d-flex flex-row"></div>
 
   <!-- jquery script -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>

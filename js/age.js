@@ -31,29 +31,6 @@ $('form').on('submit', (e) => {
 
 	$input.val('');
 
-	// convert each character of name to ascii number
-	// const nameArr = userInput.split('');
-	// nameArr.forEach((char) => {
-	// 	nameNums.push(char.charCodeAt(0));
-	// });
-
-	// add all numbers in nameNums
-	// sumName = nameNums.reduce((acc, num) => acc + num).toString();
-	// console.log(sumName);
-
-	// name in binary
-	// nameNums.forEach((num) => {
-	// 	const holdBin = num.toString(2);
-	// 	binaryName.push(holdBin);
-	// });
-	// console.log(binaryName);
-
-	// display each char in name as binary equivelant 
-	// const $displayName = $('<p>');
-	// $yearFactCont.append($displayName.text(`Your name in binary:  ${binaryName}`));
-
-	// const changeSett =
-	// console.log(settings['url'])
 
 	// animation happens here
 	$('.hor-line').animate({width: '100%'}, function(){
