@@ -4,27 +4,33 @@
 
 
 
-const $name = $('input[type=text]');
+const $input = $('input[type=text]');
 const $yearFactCont = $('.fact-container');
+const $about = $('#about');
+const $name = $('#name');
+const $birthday = $('.birthday');
+const $age = $('#age');
 
 
 let sumName;
+
+
 
 // if you submit your name, it will take your identity 
 $('form').on('submit', (e) => {
 
 	e.preventDefault();
 
-	$('form').css('visibility', 'hidden');
+	$('#name-form').css('visibility', 'hidden');
 
 	$yearFactCont.empty();
 
 	const nameNums = [];
 	const binaryName = [];
 
-	userInput = $name.val();
+	userInput = $input.val();
 
-	$name.val('');
+	$input.val('');
 
 	// convert each character of name to ascii number
 	const nameArr = userInput.split('');
@@ -51,14 +57,6 @@ $('form').on('submit', (e) => {
 	// console.log(settings['url'])
 
 	// animation happens here
-	// change width of div
-	// $('.hor-line').animate({width: '100%'}, function(){
-	// 	// visibility
-	// 	$('.ver-line').css("visibility", "visible");
-	// 	$('.ver-line').animate({height: '100%'});
-	// });
-
-
 	$('.hor-line').animate({width: '100%'}, function(){
 		// visibility
 		$('.ver-line').css("visibility", "visible");
@@ -101,6 +99,43 @@ function renderYearFact(data) {
 	const $yearFactPar = $('<p>');
 	$yearFactCont.append($yearFactPar.text(`In the year ${data.number}: ${data.text}`));
 }
+
+// if ($('a').hasClass('active')) {
+// 	$('')
+// }
+
+// if you select different menu option
+// $birthday.click(function(){
+
+// 	$('.sr-only').removeClass('sr-only');
+// 	$(this).addClass('sr-only');
+
+// 	$('#take-data').attr('placeholder', 'enter birthday');
+
+	
+
+
+
+	// const settings = {
+	// 	"async": true,
+	// 	"crossDomain": true,
+	// 	"url": "https://numbersapi.p.rapidapi.com/42/math?json=true&fragment=true",
+	// 	"method": "GET",
+	// 	"headers": {
+	// 		"x-rapidapi-host": "numbersapi.p.rapidapi.com",
+	// 		"x-rapidapi-key": "412f149179msh81d913e7b508961p1f989djsn4fcf5b0efc84"
+	// 	}
+	// };
+
+	// $.ajax(settings).done(function (response) {
+	// 	console.log(response);
+	// });
+
+
+
+
+
+// });
 
 
 

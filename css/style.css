@@ -5,18 +5,47 @@
 body {
   padding: 0;
   margin: 0;
-  background-color: rgb(219, 190, 126);
+  background-color: #ffffff;
+  background-image: linear-gradient(#6f00ab , #ffffff 80%);
   background-repeat: no-repeat;
+}
+
+a {
+  color: white;
+}
+
+.navbar {
+  margin-top: 10px;
+}
+#navbarNav {
+  margin-top: 4px;
+  background: rgba(0, 0, 0, 0.493);
+}
+
+ul {
+  margin-left: 10px;
 }
 
 form {
   position: absolute;
-  margin-top: 200px;
+  margin-top: 300px;
 }
 
 
 input[type="text"], textarea {
   border: none;
+  background: none !important;
+  box-shadow: none;
+  outline: none;
+  color: white;
+  text-align: center;
+  margin: 30px 0px;
+  font-size: 20px;
+}
+
+input[type="submit"] {
+  border: solid;
+  border-radius: 5px;
   background: none !important;
   box-shadow: none;
   outline: none;
@@ -42,7 +71,7 @@ input[type="text"], textarea {
   display: flex;
   flex-direction: row;
   position: relative;
-  width: 342px;
+  width: 280px;
   height: 190px;
   margin: auto;
   margin-top: 100px;
@@ -52,12 +81,12 @@ input[type="text"], textarea {
 .ver-line2 {
   visibility: hidden;
   background-color: rgb(59, 130, 0);
-  width: 79.5px;
+  width: 17.3%;
 }
 
 .ver-line3 {
-  background-color: indigo;
-  border: solid 5px white;
+  background-color: #6f00aba2;
+  border: solid 5px rgba(255, 255, 255, 0.534);
   border-radius: 5px;
   width: 2px;
   display: flex;
@@ -68,7 +97,7 @@ input[type="text"], textarea {
 
 .fact-container {
   position: absolute;
-  width: 300px;
+  width: 80%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -118,20 +147,22 @@ p {
 .ver-line {
   position: relative;
   visibility: hidden;
-  width: 2px;
+  width: 3px;
   background-color: #6f00ab;
   opacity: 40%;
   z-index: -1;
 }
 
 
-
+/* left hemisphere */
 .moving-line {
   margin: 10px 0px;
   width: 100%;
   display: flex;
   flex-direction: row-reverse;
 }
+
+
 
 #moving-line1 {
   background-color: #6f00ab;
@@ -169,21 +200,11 @@ p {
   animation-play-state: running;
 }
 
-@keyframes moving-line {
-  0% {
-    width: 0;
-  }
-
-  100% {
-    width: 100%;
-  }
-}
-
 
 #moving-line4 {
   background-color: #6f00ab;
   opacity: 40%;
-  height: 1px;
+  height: 2px;
   width: 100%;
   animation-name: moving-line;
   animation-duration: 3s;
@@ -217,10 +238,71 @@ p {
   
 }
 
+.moving-line1L {
+  margin-right: 20%;
+}
+
+.moving-line2L {
+  margin-right: 30%;
+}
+
+.moving-line3L {
+  margin-right: 30%;
+}
+.moving-line4L {
+  margin-right: 30%;
+}
+
+.moving-line5L {
+  margin-right: 15%;
+}
+
+@keyframes moving-line {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+/* right hemisphere */
+.moving-line-right {
+  margin: 10px 0px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.moving-line1r {
+  margin-left: 20%;
+}
+
+.moving-line2r {
+  margin-left: 30%;
+}
+
+.moving-line3r {
+  margin-left: 30%;
+}
+.moving-line4r {
+  margin-left: 30%;
+}
+
+.moving-line5r {
+  margin-left: 15%;
+}
+
 
 /* media queries */
 
 @media (min-width: 576px) { 
+
+  body {
+    background-image: linear-gradient(#6f00ab , #ffffff 70%);
+  }
+
   .svg-moon {
     height: 400px;
     width: 400px;
@@ -237,4 +319,20 @@ p {
     margin: 20px 0px;
 
   }
+
+  .info-border {
+    width: 548px;
+    height: 230px;
+    margin-bottom: -50px;
+  }
+
+  input[type="text"], textarea {
+    font-size: 20px;
+    margin: 30px 0px;
+  }
+
+  input[type="submit"] {
+    font-size: 20px;
+  }
+
 }
