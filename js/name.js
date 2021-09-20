@@ -49,12 +49,6 @@ $('form').on('submit', (e) => {
 	});
 	console.log(binaryName);
 
-	// display each char in name as binary equivelant 
-	// const $displayName = $('<p>');
-	// $yearFactCont.append($displayName.text(`Your name in binary:  ${binaryName}`));
-
-	// const changeSett =
-	// console.log(settings['url'])
 
 	// animation happens here
 	$('.hor-line').animate({width: '100%'}, function(){
@@ -93,10 +87,10 @@ $('form').on('submit', (e) => {
 // function to render data from 
 function renderYearFact(data) {
 	const calcNameTxt = `Your name calculated = ${sumName}`;
-	const $calcNamePar = $('<p>');
+	const $calcNamePar = $('<p class="facts">');
 	$yearFactCont.append($calcNamePar.text(calcNameTxt));
 	const yearFactTemp = `In the year ${sumName}: `; 
-	const $yearFactPar = $('<p>');
+	const $yearFactPar = $('<p class="facts">');
 	$yearFactCont.append($yearFactPar.text(`In the year ${data.number}: ${data.text}`));
 }
 

@@ -1,14 +1,9 @@
-
-
-
 const $input = $('input[type=number]');
 const $yearFactCont = $('.fact-container');
 const $name = $('#name');
 let $month;
 let $day;
 let sumName;
-
-
 
 // if you submit your name, it will take your identity 
 $('form').on('submit', (e) => {
@@ -28,34 +23,6 @@ $('form').on('submit', (e) => {
 	userInput = $input.val();
 
 	$input.val('');
-
-  // DELETE THIS
-	// convert each character of name to ascii number
-	const nameArr = userInput.split('');
-	nameArr.forEach((char) => {
-		nameNums.push(char.charCodeAt(0));
-	});
-
-  // DELETE THIS
-	// add all numbers in nameNums
-	sumName = nameNums.reduce((acc, num) => acc + num).toString();
-	console.log(sumName);
-
-  // DELETE THIS
-	// name in binary
-	nameNums.forEach((num) => {
-		const holdBin = num.toString(2);
-		binaryName.push(holdBin);
-	});
-	console.log(binaryName);
-
-  // binary birthday
-	// display each char in name as binary equivelant 
-	// const $displayName = $('<p>');
-	// $yearFactCont.append($displayName.text(`Your name in binary:  ${binaryName}`));
-
-	// const changeSett =
-	// console.log(settings['url'])
 
 	// animation happens here
 	$('.hor-line').animate({width: '100%'}, function(){
@@ -92,10 +59,7 @@ $('form').on('submit', (e) => {
 
 // function to render data from 
 function renderYearFact(data) {
-	// const inputInfo = ` = ${sumName}`;
-	// const $calcNamePar = $('<p>');
-	// $yearFactCont.append($calcNamePar.text(calcNameTxt));
-	const $yearFactPar = $('<p>');
+	const $yearFactPar = $('<p class="facts">');
 	$yearFactCont.append($yearFactPar.text(`On ${monthName($month)}, ${$day} ${data.year} ${data.text}`));
 }
 

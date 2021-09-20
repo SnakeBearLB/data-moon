@@ -1,17 +1,10 @@
 
 
 
-
-
-
 const $input = $('input[type=text]');
 const $yearFactCont = $('.fact-container');
 
-
-
 let sumName;
-
-
 
 // if you submit your name, it will take your identity 
 $('form').on('submit', (e) => {
@@ -30,7 +23,6 @@ $('form').on('submit', (e) => {
 	userInput = $input.val();
 
 	$input.val('');
-
 
 	// animation happens here
 	$('.hor-line').animate({width: '100%'}, function(){
@@ -59,19 +51,17 @@ $('form').on('submit', (e) => {
     }
   };
 
-
 	$.ajax(settings).done(function (response) {
 		console.log(response)
 		renderYearFact(response);
 	});
 
-
   // function to render data from 
   function renderYearFact(data) {
 	const ageTxt = `You entered ${$age}`;
-	const $ageTxtPar = $('<p>');
+	const $ageTxtPar = $('<p class="facts">');
 	$yearFactCont.append($ageTxtPar.text(ageTxt));
-	const $yearFactPar = $('<p>');
+	const $yearFactPar = $('<p class="facts">');
 	$yearFactCont.append($yearFactPar.text(`${data.number} is ${data.text}`));
 }
 
