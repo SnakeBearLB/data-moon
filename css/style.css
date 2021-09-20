@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  
 }
 
 body {
@@ -26,18 +27,25 @@ a {
 
 .navbar {
   margin-top: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 #navbarNav {
   margin-top: 4px;
 }
 
+#navbar-brand {
+  font-size: 30px;
+}
+
 ul {
-  margin-left: 10px;
+  margin-left: 40px;
 }
 
 form {
-  position: absolute;
-  margin-top: 300px;
+  position: relative ;
+  margin-top: 100px;
+  -webkit-appearance: none;
 }
 
 /* for name input */
@@ -114,8 +122,9 @@ input[type=number]::-webkit-outer-spin-button {
   width: 280px;
   height: 190px;
   margin: auto;
-  margin-top: 100px;
+  /* margin-top: 10px; */
   margin-bottom: -25px;
+  margin-top: -150px;
 }
 
 .ver-line2 {
@@ -160,6 +169,7 @@ p {
   height: 200px;
   width: 250px;
   margin: auto;
+
 }
 
 
