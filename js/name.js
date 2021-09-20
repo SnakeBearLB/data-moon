@@ -14,13 +14,22 @@ const $age = $('#age');
 
 let sumName;
 
+// reset handler
+// $('.reset').click( () => {
+// 	$('.fact-container').css('visibility', 'hidden');
+// 	$('.ver-line, .hor-line').css('height', '0px');
+// 	$('.hor-line').css('width', '0px');
+// 	$('form').css('visibility', 'visible');
+// 	$('.reset').css('visibility', 'hidden');
+// });
+
 
 
 // if you submit your name, it will take your identity 
 $('form').on('submit', (e) => {
 
 	e.preventDefault();
-
+	$('.reset').css('visibility', 'visible').hide().fadeIn(3000);
 	$('#name-form').css('visibility', 'hidden');
 
 	$yearFactCont.empty();
@@ -51,8 +60,10 @@ $('form').on('submit', (e) => {
 
 
 	// animation happens here
+	$('.hor-line').hide().show()
 	$('.hor-line').animate({width: '100%'}, function(){
 		// visibility
+		$('.fact-container').hide().show()
 		$('.ver-line').css("visibility", "visible");
 		$('.ver-line').animate({height: '100%'}, function(){
 			$('.info-border').css("visibility", "visible");
