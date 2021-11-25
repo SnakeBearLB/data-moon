@@ -29,7 +29,8 @@ let sumName;
 $('form').on('submit', (e) => {
 
 	e.preventDefault();
-	$('.reset').css('visibility', 'visible').hide().fadeIn(3000);
+	// $('.reset').css('visibility', 'visible').hide().fadeIn(3000);
+
 	$('#name-form').css('visibility', 'hidden');
 
 	$yearFactCont.empty();
