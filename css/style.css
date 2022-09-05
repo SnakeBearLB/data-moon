@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  
 }
 
 body {
@@ -149,13 +150,17 @@ input[type=number]::-webkit-outer-spin-button {
   opacity: .5;
 }
 
+
 .info-border {
   visibility: hidden;
   display: flex;
   flex-direction: row;
   position: relative;
   width: 280px;
+  height: 190px;
   margin: auto;
+  margin-bottom: -25px;
+  margin-top: -150px;
 }
 
 .ver-line2 {
@@ -192,6 +197,7 @@ input[type=number]::-webkit-outer-spin-button {
   text-align: center;
 }
 
+
 .svg-moon {
   background-image: url(/images/data-moon-orange.svg);
   background-repeat: no-repeat;
@@ -199,7 +205,10 @@ input[type=number]::-webkit-outer-spin-button {
   height: 200px;
   width: 250px;
   margin: auto;
+
 }
+
+
 
 .animated-lines {
   position: relative;
@@ -227,6 +236,7 @@ input[type=number]::-webkit-outer-spin-button {
   z-index: -1;
 }
 
+
 /* left hemisphere */
 .moving-line {
   margin: 10px 0px;
@@ -234,6 +244,8 @@ input[type=number]::-webkit-outer-spin-button {
   display: flex;
   flex-direction: row-reverse;
 }
+
+
 
 #moving-line1 {
   background-color: #fc818c;
@@ -271,6 +283,7 @@ input[type=number]::-webkit-outer-spin-button {
   animation-play-state: running;
 }
 
+
 #moving-line4 {
   background-color: #fc818c;
   opacity: 80%;
@@ -305,6 +318,7 @@ input[type=number]::-webkit-outer-spin-button {
   animation-direction: alternate;
   animation-iteration-count: infinite;
   animation-play-state: running;
+  
 }
 
 .moving-line1L {
@@ -371,6 +385,7 @@ input[type=number]::-webkit-outer-spin-button {
   margin-left: 40%;
 }
 
+
 /* media queries */
 
 @media (min-width: 576px) { 
@@ -389,11 +404,12 @@ input[type=number]::-webkit-outer-spin-button {
 
   .moving-line {
     margin: 20px 0px;
+
   }
 
   .info-border {
     width: 548px;
-    /* height: 230px; */
+    height: 230px;
     margin-bottom: -50px;
   }
 
@@ -409,4 +425,5 @@ input[type=number]::-webkit-outer-spin-button {
   .ver-line {
     width: 2px;
   }
+
 }
